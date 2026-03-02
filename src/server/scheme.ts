@@ -24,12 +24,12 @@ export class ExactIcpScheme implements SchemeNetworkServer {
       return price
     }
 
-    const raw = typeof price === 'number' ? price.toString() : price as string
+    const raw = typeof price === 'number' ? price.toString() : (price as string)
 
     if (raw.startsWith('$')) {
       throw new Error(
         'USD price conversion not yet supported for ICP. ' +
-        'Specify amount in smallest token units (e8s for ICP, e6s for ckUSDC).'
+          'Specify amount in smallest token units (e8s for ICP, e6s for ckUSDC).'
       )
     }
 
@@ -58,7 +58,7 @@ export class ExactIcpScheme implements SchemeNetworkServer {
       network: Network
       extra?: Record<string, unknown>
     },
-    _facilitatorExtensions: string[],
+    _facilitatorExtensions: string[]
   ): Promise<PaymentRequirements> {
     const ledgerId = paymentRequirements.network.split(':').pop()!
     const asset = ASSETS[ledgerId]

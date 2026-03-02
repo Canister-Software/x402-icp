@@ -59,13 +59,13 @@ export class ExactIcpClient {
     if (!facilitatorPrincipal) {
       throw new Error(
         'Missing facilitatorPrincipal in payment requirements extra. ' +
-        'The resource server must include this from the facilitator.'
+          'The resource server must include this from the facilitator.'
       )
     }
 
     const amount = BigInt(requirements.amount)
     const nonce = Date.now()
-    const expiresAt = Date.now() + (requirements.maxTimeoutSeconds * 1000)
+    const expiresAt = Date.now() + requirements.maxTimeoutSeconds * 1000
 
     // Step 1: Approve the facilitator to spend our tokens via ICRC-2
     await this.signer.icrc2Approve({

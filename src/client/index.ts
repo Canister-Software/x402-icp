@@ -5,4 +5,9 @@ export {
   createIdentitySigner,
   pemToSigner,
 } from './signer.js'
-export type { IcpSigner, Icrc2ApproveParams, PemSignerOptions, IdentitySignerOptions } from './signer.js'
+export type {
+  IcpSigner,
+  Icrc2ApproveParams,
+  PemSignerOptions,
+  IdentitySignerOptions,
+} from './signer.js'

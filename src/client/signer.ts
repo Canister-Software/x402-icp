@@ -65,7 +65,7 @@ export async function createPemSigner(opts: PemSignerOptions): Promise<IcpSigner
     } catch {
       throw new Error(
         'Could not parse PEM as Ed25519 or Secp256k1. ' +
-        'For Secp256k1, install: npm install @dfinity/identity-secp256k1'
+          'For Secp256k1, install: npm install @dfinity/identity-secp256k1'
       )
     }
   }
@@ -176,7 +176,9 @@ export async function createIdentitySigner(opts: IdentitySignerOptions): Promise
       if ('Err' in result) {
         const errKey = Object.keys(result.Err)[0]
         const errVal = result.Err[errKey]
-        throw new Error(`ICRC-2 approve failed: ${errKey} - ${JSON.stringify(errVal, (_k, v) => typeof v === 'bigint' ? v.toString() : v)}`)
+        throw new Error(
+          `ICRC-2 approve failed: ${errKey} - ${JSON.stringify(errVal, (_k, v) => (typeof v === 'bigint' ? v.toString() : v))}`
+        )
       }
 
       return BigInt(result.Ok.toString())
