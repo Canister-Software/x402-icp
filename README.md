@@ -62,7 +62,7 @@ const requirements = createIcpPaymentRequirements({
 A public facilitator for ICP is operated by Canister Software at:
 
 ``` 
-https://facilitator.consensus.canister.software
+https://facilitator.canister.software
 ```
 
 Full documentation: [docs.canister.software](https://docs.canister.software)
