@@ -1,6 +1,6 @@
 {
   "name": "@canister-software/x402-icp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "x402 payment scheme for Internet Computer (ICP) — ICRC-2 approve/transferFrom",
   "type": "module",
   "exports": {
@@ -39,7 +39,7 @@
     "node": ">=18"
   },
   "peerDependencies": {
-    "@x402/core": ">=2.4.0"
+    "@x402/core": ">=2.1.0"
   },
   "dependencies": {
     "@dfinity/agent": "^2.2.0",
